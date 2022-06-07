@@ -1,17 +1,17 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/movies-e2e/src",
+  "sourceRoot": "apps/platform-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/movies-e2e/cypress.json",
-        "devServerTarget": "movies:serve:development"
+        "cypressConfig": "apps/platform-e2e/cypress.json",
+        "devServerTarget": "platform:serve:development"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "movies:serve:production"
+          "devServerTarget": "platform:serve:production"
         }
       }
     },
@@ -19,10 +19,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/movies-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/platform-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["movies"]
+  "implicitDependencies": ["platform"]
 }

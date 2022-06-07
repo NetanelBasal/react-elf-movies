@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/movies/src",
+  "sourceRoot": "apps/platform/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,14 +9,14 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/movies",
-        "index": "apps/movies/src/index.html",
+        "outputPath": "dist/apps/platform",
+        "index": "apps/platform/src/index.html",
         "baseHref": "/",
-        "main": "apps/movies/src/main.tsx",
-        "polyfills": "apps/movies/src/polyfills.ts",
-        "tsConfig": "apps/movies/tsconfig.app.json",
-        "assets": ["apps/movies/src/favicon.ico", "apps/movies/src/assets"],
-        "styles": ["apps/movies/src/styles.scss"],
+        "main": "apps/platform/src/main.tsx",
+        "polyfills": "apps/platform/src/polyfills.ts",
+        "tsConfig": "apps/platform/tsconfig.app.json",
+        "assets": ["apps/platform/src/favicon.ico", "apps/platform/src/assets"],
+        "styles": ["apps/platform/src/styles.scss"],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
@@ -30,8 +30,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/movies/src/environments/environment.ts",
-              "with": "apps/movies/src/environments/environment.prod.ts"
+              "replace": "apps/platform/src/environments/environment.ts",
+              "with": "apps/platform/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -47,15 +47,15 @@
       "executor": "@nrwl/web:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "movies:build",
+        "buildTarget": "platform:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "movies:build:development"
+          "buildTarget": "platform:build:development"
         },
         "production": {
-          "buildTarget": "movies:build:production",
+          "buildTarget": "platform:build:production",
           "hmr": false
         }
       }
@@ -64,14 +64,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/movies/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/platform/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/movies"],
+      "outputs": ["coverage/apps/platform"],
       "options": {
-        "jestConfig": "apps/movies/jest.config.ts",
+        "jestConfig": "apps/platform/jest.config.ts",
         "passWithNoTests": true
       }
     }

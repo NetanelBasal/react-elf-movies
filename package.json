@@ -5,14 +5,26 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "p": "prettier --write '**/*.{ts,tsx,js,jsx,json,md,yml,yaml,css,scss,less,sass}'"
   },
   "private": true,
   "dependencies": {
+    "@ngneat/effects": "^1.1.0",
+    "@ngneat/effects-hooks": "^1.0.2",
+    "@ngneat/elf": "^2.0.0",
+    "@ngneat/elf-cli": "3.0.0",
+    "@ngneat/elf-devtools": "^1.2.1",
+    "@ngneat/elf-entities": "^4.3.1",
+    "@ngneat/elf-persist-state": "^1.1.2",
+    "@ngneat/elf-requests": "^1.1.3",
+    "@ngneat/react-rxjs": "^1.1.0",
     "core-js": "^3.6.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-router-dom": "6.3.0",
     "regenerator-runtime": "0.13.7",
+    "rxjs": "^7.5.5",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -29,6 +41,7 @@
     "@types/node": "16.11.7",
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",
+    "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "~5.18.0",
     "@typescript-eslint/parser": "~5.18.0",
     "babel-jest": "27.5.1",
